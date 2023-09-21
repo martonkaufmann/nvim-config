@@ -24,6 +24,7 @@ Telescope:
 https://github.com/nvim-telescope/telescope.nvim#default-mappings
 
 Plugins:
+https://github.com/nvim-neo-tree/neo-tree.nvim
 https://github.com/folke/lazy.nvim
 https://github.com/folke/which-key.nvim
 https://github.com/nvim-treesitter/nvim-treesitter
