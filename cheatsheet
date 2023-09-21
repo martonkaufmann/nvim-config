@@ -1,10 +1,19 @@
 NeoVim Cheatsheet
 
 Builtin:
+ctrl + l redraw screen, removes search highlight
 yy|Y yank/copy
 dd delete
 p paste
 P paste, paste deleted 
+/ search
+* search for string when over it, search forward
+# search for string when over it, backward
+N search forward
+n search backward
+ctrl + w, v|s split window vertically or horizontally
+ctrl + w, h|j|k|l jump between split
+ctrl + w, +|-|<|> resize split window
 
 Telescope:
 <leader>ff find_files
