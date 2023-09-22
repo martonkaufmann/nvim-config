@@ -1,3 +1,4 @@
+vim.wo.number = true
 vim.g.mapleader = " "
 
 -- Setup lazy.nvim for package/plugin management
@@ -14,13 +15,14 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- require("lazy").setup(plugins, opts)
-require("lazy").setup("plugins")
+local lazy = require("lazy")
+lazy.setup("plugins")
+local telescope = require('telescope.builtin')
 
 -- Customize keymap
-vim.keymap.set("n", "<leader>of", ":browse oldfiles", { silent = true })
+vim.keymap.set("n", "<leader>of", ":browse oldfiles")
+vim.keymap.set("n", "<leader>lh", lazy.home)
 
-local telescope = require('telescope.builtin')
 vim.keymap.set("n", "<leader>ff", telescope.find_files, {})
 vim.keymap.set("n", "<leader>fg", telescope.live_grep, {})
 vim.keymap.set("n", "<leader>fb", telescope.buffers, {})
