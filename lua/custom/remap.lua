@@ -17,7 +17,10 @@ vim.keymap.set("n", "<C-f>", function()
 	telescope.grep_string({ search = vim.fn.input("") })
 end)
 
--- LSP
+-- Undotree
+vim.keymap.set('n', '<leader><F12>', vim.cmd.UndotreeToggle)
+
+LSP
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
