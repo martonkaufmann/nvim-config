@@ -53,7 +53,7 @@ https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.m
 https://langserver.org/
 https://microsoft.github.io/language-server-protocol/implementors/servers/
 
-Installing neovim
+Installing neovim:
 curl -L -O https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 tar -xzf nvim-linux64.tar.gz
 mv nvim-linux64 nvim
@@ -61,7 +61,7 @@ ln -s nvim/bin/nvim /usr/bin/nvim
 apt-get install build-essential - for nvim-treesitter
 apt-get install ripgrep - for telescope
 
-Installing fonts
+Installing fonts:
 apt-get install fontconfig
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts
@@ -71,7 +71,9 @@ rm FiraCode.zip
 fc-cache -f -v
 Set fira code nerd font as terminal font, for WSL show hidden fonts should be checked
 
-Install lazygit
+Install lazygit:
+https://github.com/jesseduffield/lazygit/blob/master/docs/keybindings/Keybindings_en.md
+
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 tar xf lazygit.tar.gz lazygit
