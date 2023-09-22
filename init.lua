@@ -15,15 +15,5 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local lazy = require("lazy")
-lazy.setup("plugins")
-local telescope = require('telescope.builtin')
-
--- Customize keymap
-vim.keymap.set("n", "<leader>of", ":browse oldfiles")
-vim.keymap.set("n", "<leader>lh", lazy.home)
-
-vim.keymap.set("n", "<leader>ff", telescope.find_files, {})
-vim.keymap.set("n", "<leader>fg", telescope.live_grep, {})
-vim.keymap.set("n", "<leader>fb", telescope.buffers, {})
-vim.keymap.set("n", "<leader>fh", telescope.help_tags, {})
+require("lazy").setup("plugins")
+require("custom.remap")

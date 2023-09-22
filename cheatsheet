@@ -18,12 +18,16 @@ u undo
 ctlr + r redo
 v, y, p enter into visual mode select text yank and paste
 
+Custom:
+ctrl + e file browser(Ex)
+
 Telescope:
 <leader>ff find_files
 <leader>fg live_grep
 <leader>fb buffers
 <leader>fh help_tags
-
+ctrl + p git_files
+ctrl + f grep_string
 
 https://github.com/nvim-telescope/telescope.nvim#default-mappings
 
@@ -34,12 +38,9 @@ https://github.com/folke/which-key.nvim
 What is this actually for? How does this work?
 
 https://github.com/nvim-treesitter/nvim-treesitter
-apt-get install build-essential
-
 https://github.com/folke/flash.nvim
 https://github.com/jesseduffield/lazygit
 https://github.com/nvim-lua/plenary.nvim
-https://github.com/smoka7/multicursors.nvim
 
 https://github.com/neovim/nvim-lspconfig
 https://github.com/neovim/nvim-lspconfig#suggested-configuration
@@ -52,6 +53,8 @@ curl -L -O https://github.com/neovim/neovim/releases/latest/download/nvim-linux6
 tar -xzf nvim-linux64.tar.gz
 mv nvim-linux64 nvim
 ln -s nvim/bin/nvim /usr/bin/nvim
+apt-get install build-essential - for nvim-treesitter
+apt-get install ripgrep - for telescope
 
 Installing fonts
 apt-get install fontconfig
