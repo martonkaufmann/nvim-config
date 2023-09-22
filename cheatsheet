@@ -64,5 +64,6 @@ mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts
 curl -L -O https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/FiraCode.zip
 unzip FiraCode.zip
+rm FiraCode.zip
 fc-cache -f -v
 
