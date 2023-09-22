@@ -20,7 +20,7 @@ end)
 -- Undotree
 vim.keymap.set('n', '<leader><F12>', vim.cmd.UndotreeToggle)
 
-LSP
+-- LSP
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
