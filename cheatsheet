@@ -34,6 +34,8 @@ https://github.com/folke/which-key.nvim
 What is this actually for? How does this work?
 
 https://github.com/nvim-treesitter/nvim-treesitter
+apt-get install build-essential
+
 https://github.com/folke/flash.nvim
 https://github.com/jesseduffield/lazygit
 https://github.com/nvim-lua/plenary.nvim
