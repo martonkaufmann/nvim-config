@@ -43,6 +43,8 @@ https://github.com/folke/which-key.nvim
 https://github.com/mbbill/undotree
 https://github.com/nvim-treesitter/nvim-treesitter
 https://github.com/nvim-lua/plenary.nvim
+https://github.com/nvim-lualine/lualine.nvim
+https://github.com/nvim-tree/nvim-web-devicons
 
 LSP:
 https://github.com/neovim/nvim-lspconfig
