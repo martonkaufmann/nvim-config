@@ -54,11 +54,14 @@ https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.m
 https://langserver.org/
 https://microsoft.github.io/language-server-protocol/implementors/servers/
 
+Installing languages:
+https://go.dev/doc/install
+https://github.com/nodesource/distributions#installation-instructions
+
 Installing neovim:
 curl -L -O https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
-tar -xzf nvim-linux64.tar.gz
-mv nvim-linux64 nvim
-ln -s nvim/bin/nvim /usr/bin/nvim
+tar -C /usr/local -xzf nvim-linux64.tar.gz
+echo "export PATH=$PATH:/usr/local/nvim-linux64/bin" >> ~/.bashrc
 apt-get install build-essential - for nvim-treesitter
 apt-get install ripgrep - for telescope
 
@@ -78,5 +81,5 @@ https://github.com/jesseduffield/lazygit/blob/master/docs/keybindings/Keybinding
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 tar xf lazygit.tar.gz lazygit
-sudo install lazygit /usr/bin
+sudo install lazygit /usr/local/bin
 rm lazygit lazygit.tar.gz
