@@ -17,6 +17,7 @@ ctrl + w, +|-|<|> resize split window
 u undo
 ctlr + r redo
 v, y, p enter into visual mode select text yank and paste
+v, n(1,2,3,...), <|> indent or unindent multiple lines
 
 Custom:
 ctrl + e file browser(Ex)
