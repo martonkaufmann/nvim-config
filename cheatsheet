@@ -22,6 +22,11 @@ v, n(1,2,3,...), <|> indent or unindent multiple lines
 Custom:
 ctrl + e file browser(Ex)
 
+LSP:
+<leader>f format file
+gd go to definition
+ctrl + o go back from definition
+
 Telescope:
 <leader>ff find_files
 <leader>fg live_grep
