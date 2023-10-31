@@ -4,6 +4,10 @@ local telescope = require("telescope.builtin")
 -- Built in
 vim.keymap.set("n", "<C-e>", vim.cmd.Ex)
 
+vim.keymap.set("n", "<leader>t", function()
+    vim.cmd.tabnew(vim.fn.input(""))
+end)
+ 
 -- Lazy
 vim.keymap.set("n", "<leader>lh", lazy.home)
 
