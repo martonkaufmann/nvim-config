@@ -1,6 +1,9 @@
 NeoVim Cheatsheet
 
 Builtin:
+% create new file
+d create new directory
+D delete directory
 ctrl + l redraw screen, removes search highlight
 yy|Y yank/copy
 dd delete
@@ -23,6 +26,7 @@ v, n(1,2,3,...), <|> indent or unindent multiple lines
 
 Custom:
 ctrl + e file browser(Ex)
+<leader>t open new tab, can specify filename
 
 LSP:
 <leader>f format file
@@ -30,7 +34,7 @@ gd go to definition
 ctrl + o go back from definition
 
 Telescope:
-<leader>ff find_files
+<leader>ff find_files - use ctrl+t to open in new tab
 <leader>fg live_grep
 <leader>fb buffers
 <leader>fh help_tags
