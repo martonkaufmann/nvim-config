@@ -57,6 +57,8 @@ https://github.com/nvim-treesitter/nvim-treesitter
 https://github.com/nvim-lua/plenary.nvim
 https://github.com/nvim-lualine/lualine.nvim
 https://github.com/nvim-tree/nvim-web-devicons
+https://github.com/hrsh7th/nvim-cmp
+https://github.com/nvim-telescope/telescope.nvim
 
 LSP:
 https://github.com/neovim/nvim-lspconfig
@@ -85,6 +87,7 @@ curl -L -O https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Fira
 unzip FiraCode.zip
 rm FiraCode.zip
 fc-cache -f -v
+FiraCode has to be installed on the host system as well when using it with WSL
 Set fira code nerd font as terminal font, for WSL show hidden fonts should be checked
 
 Install lazygit:
