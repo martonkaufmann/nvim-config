@@ -1,6 +1,6 @@
-NeoVim Cheatsheet
+# NeoVim Cheatsheet
 
-Builtin:
+### Builtin:
 % create new file
 d create new directory
 D delete directory
@@ -24,16 +24,16 @@ v, n(1,2,3,...), <|> indent or unindent multiple lines
 :s/foo/bar/
 :%s/foo/bar/g
 
-Custom:
+### Custom:
 ctrl + e file browser(Ex)
 <leader>t open new tab, can specify filename
 
-LSP:
+### LSP:
 <leader>f format file
 gd go to definition
 ctrl + o go back from definition
 
-Telescope:
+### Telescope:
 <leader>ff find_files - use ctrl+t to open in new tab
 <leader>fg live_grep
 <leader>fb buffers
@@ -41,15 +41,15 @@ Telescope:
 ctrl + p git_files
 ctrl + f grep_string
 
-Undotree:
+### Undotree:
 <leader>F12 open undotree
 
-Lazyvim:
+### Lazyvim:
 <leader>lh opens lazyvim home
 
 https://github.com/nvim-telescope/telescope.nvim#default-mappings
 
-Plugins:
+### Plugins:
 https://github.com/folke/lazy.nvim
 https://github.com/folke/which-key.nvim
 https://github.com/mbbill/undotree
@@ -60,18 +60,18 @@ https://github.com/nvim-tree/nvim-web-devicons
 https://github.com/hrsh7th/nvim-cmp
 https://github.com/nvim-telescope/telescope.nvim
 
-LSP:
+### LSP:
 https://github.com/neovim/nvim-lspconfig
 https://github.com/neovim/nvim-lspconfig#suggested-configuration
 https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 https://langserver.org/
 https://microsoft.github.io/language-server-protocol/implementors/servers/
 
-Installing languages:
+### Installing languages:
 https://go.dev/doc/install
 https://github.com/nodesource/distributions#installation-instructions
 
-Installing neovim:
+### Installing neovim:
 curl -L -O https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 tar -xzf nvim-linux64.tar.gz
 mv nvim-linux64 /usr/local/nvim
@@ -79,7 +79,7 @@ apt-get install build-essential - for nvim-treesitter
 apt-get install ripgrep - for telescope
 Add "export PATH=$PATH:/usr/local/nvim/bin" to the ~/.bashrc
 
-Installing fonts:
+### Installing fonts:
 apt-get install fontconfig
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts
@@ -90,7 +90,7 @@ fc-cache -f -v
 FiraCode has to be installed on the host system as well when using it with WSL
 Set fira code nerd font as terminal font, for WSL show hidden fonts should be checked
 
-Install lazygit:
+### Install lazygit:
 https://github.com/jesseduffield/lazygit/blob/master/docs/keybindings/Keybindings_en.md
 
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
