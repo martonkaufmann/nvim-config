@@ -74,10 +74,10 @@ https://github.com/nodesource/distributions#installation-instructions
 ### Installing neovim:
 curl -L -O https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 tar -xzf nvim-linux64.tar.gz
-mv nvim-linux64 /usr/local/nvim
+mv nvim-linux64 /usr/bin/nvim
 apt-get install build-essential - for nvim-treesitter
 apt-get install ripgrep - for telescope
-Add "export PATH=$PATH:/usr/local/nvim/bin" to the ~/.bashrc
+Add "export PATH=$PATH:/usr/bin/nvim/bin" to the ~/.bashrc
 
 ### Installing fonts:
 apt-get install fontconfig
