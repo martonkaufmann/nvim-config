@@ -38,6 +38,7 @@
 `<leader>fg` live_grep\
 `<leader>fb` buffers\
 `<leader>fh` help_tags\
+`<leader>fd` live grep in folder, folder autocompletion works with tab\
 `ctrl + p` git_files\
 `ctrl + f` grep_string
 
