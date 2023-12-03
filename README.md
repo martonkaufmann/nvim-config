@@ -22,7 +22,11 @@
 `v, y, p` enter into visual mode select text yank and paste\
 `v, n(1,2,3,...), <|>` indent or unindent multiple lines\
 `:s/foo/bar/`\
-`:%s/foo/bar/g`
+`:%s/foo/bar/g`\
+`0` go to beginning of line\
+`_` go to first character in line\
+`$` go to end of line\
+`%` go to open/close bracket
 
 ### Custom:
 `ctrl + e` file browser(Ex)\
@@ -32,6 +36,7 @@
 `<leader>f` format file\
 `gd` go to definition\
 `ctrl + o` go back from definition
+`<leader>rn` rename variable
 
 ### Telescope:
 `<leader>ff` find_files - use ctrl+t to open in new tab\
