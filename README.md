@@ -30,7 +30,7 @@
 
 ### Custom:
 `ctrl + e` file browser(Ex)\
-`<leader>t` open new tab, can specify filename
+`<leader>t` open new tab, can specify filename and create file or search for file with tab
 
 ### LSP:
 `<leader>f` format file\
