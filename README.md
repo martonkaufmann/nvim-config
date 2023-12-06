@@ -27,6 +27,9 @@
 `_` go to first character in line\
 `$` go to end of line\
 `%` go to open/close bracket
+`:buffers` list all open buffers
+`:bd n(1,2,3,...)` delete buffer with specified id
+`:bw n(1,2,3,...)` wipe buffer with specified id
 
 ### Custom:
 `ctrl + e` file browser(Ex)\
