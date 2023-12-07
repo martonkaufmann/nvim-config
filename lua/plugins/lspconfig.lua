@@ -9,7 +9,13 @@ return {
 		-- go install golang.org/x/tools/gopls@latest
 		-- require("lspconfig").gopls.setup{}
 
-		-- composer global require vimeo/psalm
-		-- require("lspconfig").psalm.setup{}
+        -- https://phpactor.readthedocs.io/en/master/usage/standalone.html
+		-- require("lspconfig").phpactor.setup{
+        --    on_attach = on_attach,
+        --    init_options = {
+        --        ["language_server_phpstan.enabled"] = false,
+        --        ["language_server_psalm.enabled"] = false,
+        --    }            
+        -- }
 	end
 }
