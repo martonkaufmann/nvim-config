@@ -26,15 +26,15 @@
 `0` go to beginning of line\
 `_` go to first character in line\
 `$` go to end of line\
-`%` go to open/close bracket
-`:buffers` list all open buffers
-`:bd n(1,2,3,...)` delete buffer with specified id
-`:bw n(1,2,3,...)` wipe buffer with specified id
-`zf` fold, from last line to top
-`zo` open and remove fold
-`zi` toggle fold
-`gU` make uppercase
-`gu` make lowercase
+`%` go to open/close bracket\
+`:buffers` list all open buffers\
+`:bd n(1,2,3,...)` delete buffer with specified id\
+`:bw n(1,2,3,...)` wipe buffer with specified id\
+`zf` fold, from last line to top\
+`zo` open and remove fold\
+`zi` toggle fold\
+`gU` make uppercase\
+`gu` make lowercase\
 
 ### Custom:
 `ctrl + e` file browser(Ex)\
