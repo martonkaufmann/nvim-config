@@ -3,7 +3,7 @@ local telescope = require("telescope.builtin")
 
 -- Built in
 vim.keymap.set("n", "<C-e>", vim.cmd.Ex)
-
+-- TODO: Check and debug
 vim.keymap.set("n", "<leader>t", function()
     vim.cmd.tabnew(vim.fn.input("", "", "file"))
 end)
@@ -14,6 +14,7 @@ vim.keymap.set("n", "<leader>lh", lazy.home)
 -- Telescope
 vim.keymap.set("n", "<leader>ff", telescope.find_files, {})
 vim.keymap.set("n", "<leader>fg", telescope.live_grep, {})
+-- TODO: Check and debug
 vim.keymap.set("n", "<leader>fd", function() 
     -- https://neovim.io/doc/user/builtin.html#input()
     -- https://github.com/neovim/neovim/blob/master/runtime/doc/usr_41.txt#L974

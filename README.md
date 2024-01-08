@@ -35,6 +35,7 @@
 `zi` toggle fold\
 `gU` make uppercase\
 `gu` make lowercase\
+`ctrl + w + w` switch between windows\
 
 ### Custom:
 `ctrl + e` file browser(Ex)\
