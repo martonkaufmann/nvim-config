@@ -37,6 +37,13 @@
 `gu` make lowercase\
 `ctrl + w + w` switch between windows\
 
+https://neovim.io/doc/user/motion.html#mark-motions
+
+`backtick` list all marks\
+`backtick + [mark name]` - jumps to given mark\
+`double backtick` - jumps between marks last two marks\
+`m + [upper- or lowercase letter]` add a new mark
+
 ### Custom:
 `ctrl + e` file browser(Ex)\
 `<leader>t` open new tab, can specify filename and create file or search for file with tab
