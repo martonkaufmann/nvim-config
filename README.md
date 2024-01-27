@@ -33,15 +33,18 @@
 `zf` fold, from last line to top\
 `zo` open and remove fold\
 `zi` toggle fold\
+`zfaB` fold block\
 `gU` make uppercase\
 `gu` make lowercase\
 `ctrl + w + w` switch between windows\
+`ctrl + o` go back to prev screen
+`tab` go to next screen
 
 https://neovim.io/doc/user/motion.html#mark-motions
 
-`backtick` list all marks\
-`backtick + [mark name]` - jumps to given mark\
-`double backtick` - jumps between marks last two marks\
+`<backtick>` list all marks\
+`<backtick> + [mark name]` - jumps to given mark\
+`double <backtick>` - jumps between marks last two marks\
 `m + [upper- or lowercase letter]` add a new mark
 
 ### Custom:
@@ -51,7 +54,6 @@ https://neovim.io/doc/user/motion.html#mark-motions
 ### LSP:
 `<leader>f` format file\
 `gd` go to definition\
-`ctrl + o` go back from definition
 `<leader>rn` rename variable
 
 ### Telescope:
