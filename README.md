@@ -39,6 +39,7 @@
 `ctrl + w + w` switch between windows\
 `ctrl + o` go back to prev screen
 `tab` go to next screen
+`swift + d` delete until cursor
 
 https://neovim.io/doc/user/motion.html#mark-motions
 
