@@ -19,6 +19,7 @@
 `ctrl + w, +|-|<|>` resize split window\
 `u` undo\
 `ctlr + r` redo\
+`R` replace at cursor\
 `v, y, p` enter into visual mode select text yank and paste\
 `v, n(1,2,3,...), <|>` indent or unindent multiple lines\
 `:s/foo/bar/`\
@@ -39,7 +40,8 @@
 `ctrl + w + w` switch between windows\
 `ctrl + o` go back to prev screen\
 `tab` go to next screen\
-`swift + d` delete until cursor
+`D` delete until cursor\
+`:reg` list registers and select text to paste
 
 https://neovim.io/doc/user/motion.html#mark-motions
 
@@ -98,11 +100,12 @@ https://github.com/nvim-telescope/telescope.nvim#default-mappings
 
 ### Installing neovim:
 `curl -L -O https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz`\
-`tar -xzf nvim-linux64.tar.gz`\
-`mv nvim-linux64 /usr/bin/nvim`\
+`mkdir -p ~/.local/bin/nvim`\
+`tar -xzf nvim-linux64.tar.gz -C ~/.local/bin/nvim`\
+`rm nvim-linux64.tar.gz`\
 `apt-get install build-essential` - for nvim-treesitter\
 `apt-get install ripgrep` - for telescope\
-Add "export PATH=$PATH:/usr/bin/nvim/bin" to the ~/.bashrc
+Add "export PATH=$PATH:~/.local/bin/nvim/bin" to the ~/.bashrc
 
 ### Installing fonts:
 `apt-get install fontconfig`\
@@ -120,7 +123,8 @@ Set fira code nerd font as terminal font, for WSL show hidden fonts should be ch
 https://github.com/jesseduffield/lazygit/blob/master/docs/keybindings/Keybindings_en.md
 
 `LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')`\
-`curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"`\
-`tar xf lazygit.tar.gz lazygit`\
-`sudo install lazygit /usr/local/bin`\
-`rm lazygit lazygit.tar.gz`
+`curl -L -O lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"`\
+`mkdir -p ~/.local/bin/lazygit`\
+`tar -xzf lazygit.tar.gz ~/.local/bin/lazygit`\
+`rm lazygit.tar.gz`
+Add "export PATH=$PATH:~/.local/bin/lazygit/bin" to the ~/.bashrc
