@@ -17,5 +17,10 @@ return {
         --        ["language_server_psalm.enabled"] = false,
         --    }            
         -- }
+
+        -- https://github.com/vimeo/psalm/blob/5.x/docs/running_psalm/installation.md
+        -- Recommended to install globally in container using the followign command:
+        -- composer global require vimeo/psalm --no-interaction
+        -- require("lspconfig").psalm.setup{}
 	end
 }

@@ -66,5 +66,8 @@ return {
 		-- require("lspconfig")["phpactor"].setup {
 		--     capabilities = capabilities
 		-- }
+		-- require("lspconfig")["psalm"].setup {
+		--     capabilities = capabilities
+		-- }
 	end
 }
