@@ -59,7 +59,8 @@ https://neovim.io/doc/user/motion.html#mark-motions
 ### LSP:
 `<leader>f` format file\
 `gd` go to definition\
-`<leader>rn` rename variable
+`<leader>rn` rename variable\
+`<space>e` show error in floating window
 
 ### Telescope:
 `<leader>ff` find_files - use ctrl+t to open in new tab\
