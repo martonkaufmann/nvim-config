@@ -69,5 +69,9 @@ return {
 		-- require("lspconfig")["psalm"].setup {
 		--     capabilities = capabilities
 		-- }
+        -- Prefer this one
+		-- require("lspconfig")["intelephense"].setup {
+		--     capabilities = capabilities
+		-- }
 	end
 }
