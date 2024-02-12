@@ -25,6 +25,6 @@ return {
         -- require("lspconfig").psalm.setup{}
 
         -- npm install -g intelephense
-        -- require("lspconfig").psalm.setup{}
+        -- require("lspconfig").intelephense.setup{}
 	end
 }
