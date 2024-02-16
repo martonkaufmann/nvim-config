@@ -42,8 +42,9 @@
 `tab` go to next screen\
 `D` delete until cursor\
 `:reg` list registers and select text to paste\
-`v` in file exporer open the folder or file in a new vertical split
-
+`v` in file exporer open the folder or file in a new vertical split\
+`"+y` yank line(s) to the global registry\
+`"+p` paste line from global registry
 
 https://neovim.io/doc/user/motion.html#mark-motions
 

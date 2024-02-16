@@ -19,6 +19,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
+require("custom.wsl-clipboard")
 require("custom.remap")
 
 vim.cmd "colorscheme tokyonight"
