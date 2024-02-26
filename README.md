@@ -104,11 +104,12 @@ https://github.com/nvim-telescope/telescope.nvim#default-mappings
 
 ### Installing neovim:
 `curl -L -O https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz`\
-`mkdir -p ~/.local/bin/nvim`\
+`mkdir -p ~/.local/bin`\
 `tar -xzf nvim-linux64.tar.gz -C ~/.local/bin`\
 `rm nvim-linux64.tar.gz`\
 `apt-get install build-essential` - for nvim-treesitter\
 `apt-get install ripgrep` - for telescope\
+`git clone git@github.com:martonkaufmann/nvim-config.git ~/.config/nvim`\
 Add "export PATH=$PATH:~/.local/bin/nvim-linux64/bin" to the ~/.bashrc
 
 ### Installing fonts:
