@@ -4,7 +4,7 @@ return {
 		local lspconfig = require("lspconfig")
 
 		-- npm install -g typescript typescript-language-server
-		require("lspconfig").tsserver.setup{}
+		-- require("lspconfig").tsserver.setup{}
 
 		-- go install golang.org/x/tools/gopls@latest
 		-- require("lspconfig").gopls.setup{}
