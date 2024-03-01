@@ -65,7 +65,9 @@ https://neovim.io/doc/user/motion.html#mark-motions
 
 ### Telescope:
 `<leader>ff` find_files - use ctrl+t to open in new tab\
+`<leader>FF` find_files in specific folder\
 `<leader>fg` live_grep\
+`<leader>FG` live_grep in specific folder\
 `<leader>fb` buffers\
 `<leader>fh` help_tags\
 `<leader>fd` live grep in folder, folder autocompletion works with tab\

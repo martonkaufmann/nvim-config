@@ -13,13 +13,20 @@ vim.keymap.set("n", "<leader>lh", lazy.home)
 
 -- Telescope
 vim.keymap.set("n", "<leader>ff", telescope.find_files, {})
+-- TODO: Check and debug
+vim.keymap.set("n", "<leader>FF", function()
+    -- https://neovim.io/doc/user/builtin.html#input()
+    -- https://github.com/neovim/neovim/blob/master/runtime/doc/usr_41.txt#L974
+    telescope.find_files({ search_dirs = {vim.fn.input("", "", "dir")} }) 
+end)
 vim.keymap.set("n", "<leader>fg", telescope.live_grep, {})
 -- TODO: Check and debug
-vim.keymap.set("n", "<leader>fd", function() 
+vim.keymap.set("n", "<leader>FG", function()
     -- https://neovim.io/doc/user/builtin.html#input()
     -- https://github.com/neovim/neovim/blob/master/runtime/doc/usr_41.txt#L974
     telescope.live_grep({ search_dirs = {vim.fn.input("", "", "dir")} }) 
 end)
+
 vim.keymap.set("n", "<leader>fb", telescope.buffers, {})
 vim.keymap.set("n", "<leader>fh", telescope.help_tags, {})
 vim.keymap.set("n", "<C-p>", telescope.git_files, {})
