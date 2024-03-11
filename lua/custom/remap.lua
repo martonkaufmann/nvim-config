@@ -29,7 +29,7 @@ end, { desc = "Live grep in folder" })
 
 vim.keymap.set("n", "<leader>tb", telescope.buffers, { desc = "List buffers" })
 vim.keymap.set("n", "<leader>th", telescope.help_tags, { desc = "List telescope help tags" })
-vim.keymap.set("n", "<leader>tg", telescope.git_files, { desc = "List git files" })
+vim.keymap.set("n", "<leader>ts", telescope.git_files, { desc = "List git files" })
 
 -- Undotree
 vim.keymap.set("n", "<leader><F12>", vim.cmd.UndotreeToggle, { desc = "Open undotree" })
@@ -53,16 +53,16 @@ vim.api.nvim_create_autocmd("LspAttach", {
     -- Buffer local mappings.
     -- See `:help vim.lsp.*` for documentation on any of the below functions
     local opts = { buffer = ev.buf }
-    vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { buffer = ev.buf, desc = "Go to declaration" })
+    --vim.keymap.set("n", "<leader>D", vim.lsp.buf.declaration, { buffer = ev.buf, desc = "Go to declaration" })
+    vim.keymap.set("n", "gD", vim.lsp.buf.type_definition, { buffer = ev.buf, desc = "Go to type definition" })
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = ev.buf, desc = "Go to definition" })
     vim.keymap.set("n", "gk", vim.lsp.buf.hover, { buffer = ev.buf, desc = "Show definition" })
     vim.keymap.set("n", "gK", vim.lsp.buf.signature_help, { buffer = ev.buf, desc = "Show signature helper" })
     vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { buffer = ev.buf, desc = "Go to implementation" })
     vim.keymap.set("n", "gr", vim.lsp.buf.references, { buffer = ev.buf, desc = "Show references" })
-    vim.keymap.set("n", "grn", vim.lsp.buf.rename, { buffer = ev.buf, desc = "Rename" })
+    vim.keymap.set("n", "gn", vim.lsp.buf.rename, { buffer = ev.buf, desc = "Rename" })
     vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
-    vim.keymap.set("n", "<leader>ls", vim.lsp.buf.document_symbol, { buffer = ev.buf, desc = "Document symbols" })
-    vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, { buffer = ev.buf, desc = "Go to type definition" })
+    vim.keymap.set("n", "gs", vim.lsp.buf.document_symbol, { buffer = ev.buf, desc = "Document symbols" })
     vim.keymap.set("n", "<leader>f", function()
       vim.lsp.buf.format { async = true }
     end, { buffer = ev.buf, desc = "Format" })
