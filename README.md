@@ -45,48 +45,20 @@
 `v` in file exporer open the folder or file in a new vertical split\
 `"+y` yank line(s) to the global registry\
 `"+p` paste line from global registry
-
-https://neovim.io/doc/user/motion.html#mark-motions
-
 `<backtick>` list all marks\
 `<backtick> + [mark name]` - jumps to given mark\
 `double <backtick>` - jumps between marks last two marks\
 `m + [upper- or lowercase letter]` add a new mark
 
-### Custom:
-`ctrl + e` file browser(Ex)\
-`<leader>t` open new tab, can specify filename and create file or search for file with tab
-
-### LSP:
-`<leader>f` format file\
-`gd` go to definition\
-`<leader>rn` rename variable\
-`<space>e` show error in floating window
-
-### Telescope:
-`<leader>ff` find_files - use ctrl+t to open in new tab\
-`<leader>FF` find_files in specific folder\
-`<leader>fg` live_grep\
-`<leader>FG` live_grep in specific folder\
-`<leader>fb` buffers\
-`<leader>fh` help_tags\
-`ctrl + p` git_files\
-`ctrl + f` grep_string
-
-### Undotree:
-`<leader>F12` open undotree
-
-### Lazyvim:
-`<leader>lh` opens lazyvim home
-
-https://github.com/nvim-telescope/telescope.nvim#default-mappings
+* https://neovim.io/doc/user/motion.html#mark-motions
+* https://github.com/nvim-telescope/telescope.nvim#default-mappings
+* Check custom/remap.lua and plugins/cmp.lua
 
 ### Plugins:
 * https://github.com/folke/lazy.nvim
 * https://github.com/folke/which-key.nvim
 * https://github.com/mbbill/undotree
 * https://github.com/nvim-treesitter/nvim-treesitter
-* https://github.com/nvim-lua/plenary.nvim
 * https://github.com/nvim-lualine/lualine.nvim
 * https://github.com/nvim-tree/nvim-web-devicons
 * https://github.com/hrsh7th/nvim-cmp
@@ -128,8 +100,7 @@ Set fira code nerd font as terminal font, for WSL show hidden fonts should be ch
 ### Install lazygit:
 https://github.com/jesseduffield/lazygit/blob/master/docs/keybindings/Keybindings_en.md
 
-`LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')`\
-`curl -L -O lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"`\
+`curl -L -O lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v0.40.2/lazygit_0.40.2_Linux_x86_64.tar.gz"`\
 `mkdir -p ~/.local/bin/lazygit`\
 `tar -xzf lazygit.tar.gz -C ~/.local/bin`\
 `rm lazygit.tar.gz`
