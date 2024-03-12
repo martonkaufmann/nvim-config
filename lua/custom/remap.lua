@@ -12,24 +12,28 @@ end, { desc = "Open file in new tab" })
 vim.keymap.set("n", "<leader>lh", lazy.home, { desc = "Open lazy home" })
 
 -- Telescope
-vim.keymap.set("n", "<leader>tf", telescope.find_files, { desc = "Find files" })
+vim.keymap.set("n", "<leader>pf", function() 
+    telescope.find_files()
+end, { desc = "Find files" })
 -- TODO: Check and debug
-vim.keymap.set("n", "<leader>tF", function()
+vim.keymap.set("n", "<leader>pF", function()
     -- https://neovim.io/doc/user/builtin.html#input()
     -- https://github.com/neovim/neovim/blob/master/runtime/doc/usr_41.txt#L974
-    telescope.find_files({ search_dirs = {vim.fn.input("", "", "dir")} }) 
+    telescope.find_files({ search_dirs = { vim.fn.input("", "", "dir") } }) 
 end, { desc = "Find files in folder" })
-vim.keymap.set("n", "<leader>tg", telescope.live_grep, { desc = "Live grep" })
+vim.keymap.set("n", "<leader>pg", function()
+    telescope.live_grep()
+end, { desc = "Live grep" })
 -- TODO: Check and debug
-vim.keymap.set("n", "<leader>tG", function()
+vim.keymap.set("n", "<leader>pG", function()
     -- https://neovim.io/doc/user/builtin.html#input()
     -- https://github.com/neovim/neovim/blob/master/runtime/doc/usr_41.txt#L974
-    telescope.live_grep({ search_dirs = {vim.fn.input("", "", "dir")} }) 
+    telescope.live_grep({ search_dirs = { vim.fn.input("", "", "dir") } }) 
 end, { desc = "Live grep in folder" })
 
-vim.keymap.set("n", "<leader>tb", telescope.buffers, { desc = "List buffers" })
-vim.keymap.set("n", "<leader>th", telescope.help_tags, { desc = "List telescope help tags" })
-vim.keymap.set("n", "<leader>ts", telescope.git_files, { desc = "List git files" })
+vim.keymap.set("n", "<leader>pb", telescope.buffers, { desc = "List buffers" })
+vim.keymap.set("n", "<leader>ph", telescope.help_tags, { desc = "List telescope help tags" })
+vim.keymap.set("n", "<leader>ps", telescope.git_files, { desc = "List git files" })
 
 -- Undotree
 vim.keymap.set("n", "<leader><F12>", vim.cmd.UndotreeToggle, { desc = "Open undotree" })
@@ -53,7 +57,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
     -- Buffer local mappings.
     -- See `:help vim.lsp.*` for documentation on any of the below functions
     local opts = { buffer = ev.buf }
-    --vim.keymap.set("n", "<leader>D", vim.lsp.buf.declaration, { buffer = ev.buf, desc = "Go to declaration" })
     vim.keymap.set("n", "gD", vim.lsp.buf.type_definition, { buffer = ev.buf, desc = "Go to type definition" })
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = ev.buf, desc = "Go to definition" })
     vim.keymap.set("n", "gk", vim.lsp.buf.hover, { buffer = ev.buf, desc = "Show definition" })
@@ -62,8 +65,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "gr", vim.lsp.buf.references, { buffer = ev.buf, desc = "Show references" })
     vim.keymap.set("n", "gn", vim.lsp.buf.rename, { buffer = ev.buf, desc = "Rename" })
     vim.keymap.set("n", "gs", vim.lsp.buf.document_symbol, { buffer = ev.buf, desc = "Document symbols" })
-    vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
-    vim.keymap.set("n", "<leader>f", function()
+    vim.keymap.set("n", "gf", function()
       vim.lsp.buf.format { async = true }
     end, { buffer = ev.buf, desc = "Format" })
     vim.keymap.set("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, { buffer = ev.buf, desc = "Add to workspace" })
@@ -71,5 +73,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "<leader>wl", function()
       print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
     end, { buffer = ev.buf, desc = "List workspaces" })
+    -- TODO: Check if these are even required
+    --vim.keymap.set("n", "<leader>D", vim.lsp.buf.declaration, { buffer = ev.buf, desc = "Go to declaration" })
+    --vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
   end,
 })
