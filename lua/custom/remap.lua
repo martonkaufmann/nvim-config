@@ -65,7 +65,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "gr", vim.lsp.buf.references, { buffer = ev.buf, desc = "Show references" })
     vim.keymap.set("n", "gn", vim.lsp.buf.rename, { buffer = ev.buf, desc = "Rename" })
     vim.keymap.set("n", "gs", vim.lsp.buf.document_symbol, { buffer = ev.buf, desc = "Document symbols" })
-    vim.keymap.set("n", "gf", function()
+    vim.keymap.set("n", "gF", function()
       vim.lsp.buf.format { async = true }
     end, { buffer = ev.buf, desc = "Format" })
     vim.keymap.set("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, { buffer = ev.buf, desc = "Add to workspace" })
