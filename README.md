@@ -76,7 +76,7 @@
 * https://github.com/nodesource/distributions#installation-instructions
 
 ### Installing neovim:
-`curl -L -O https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz`\
+`curl -O -L https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz`\
 `mkdir -p ~/.local/bin`\
 `tar -xzf nvim-linux64.tar.gz -C ~/.local/bin`\
 `rm nvim-linux64.tar.gz`\
@@ -89,7 +89,7 @@ Add "export PATH=$PATH:~/.local/bin/nvim-linux64/bin" to the ~/.bashrc
 `apt-get install fontconfig`\
 `mkdir -p ~/.local/share/fonts`\
 `cd ~/.local/share/fonts`\
-`curl -L -O https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/FiraCode.zip`\
+`curl -O -L https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/FiraCode.zip`\
 `unzip FiraCode.zip`\
 `rm FiraCode.zip`\
 `fc-cache -f -v`\
@@ -100,8 +100,8 @@ Set fira code nerd font as terminal font, for WSL show hidden fonts should be ch
 ### Install lazygit:
 https://github.com/jesseduffield/lazygit/blob/master/docs/keybindings/Keybindings_en.md
 
-`curl -L -O lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v0.40.2/lazygit_0.40.2_Linux_x86_64.tar.gz"`\
+`curl -O -L https://github.com/jesseduffield/lazygit/releases/download/v0.40.2/lazygit_0.40.2_Linux_x86_64.tar.gz`\
 `mkdir -p ~/.local/bin/lazygit`\
-`tar -xzf lazygit.tar.gz -C ~/.local/bin`\
-`rm lazygit.tar.gz`
-Add "export PATH=$PATH:~/.local/bin/lazygit/bin" to the ~/.bashrc
+`tar -xzf lazygit_0.40.2_Linux_x86_64.tar.gz -C ~/.local/bin/lazygit`\
+`rm lazygit_0.40.2_Linux_x86_64.tar.gz`
+Add "export PATH=$PATH:~/.local/bin/lazygit" to the ~/.bashrc
