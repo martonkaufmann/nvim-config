@@ -48,7 +48,8 @@
 `<backtick>` list all marks\
 `<backtick> + [mark name]` - jumps to given mark\
 `double <backtick>` - jumps between marks last two marks\
-`m + [upper- or lowercase letter]` add a new mark
+`m + [upper- or lowercase letter]` add a new mark\
+`ctrl + w x` swap windows
 
 * https://neovim.io/doc/user/motion.html#mark-motions
 * https://github.com/nvim-telescope/telescope.nvim#default-mappings
