@@ -83,7 +83,8 @@
 `rm nvim-linux64.tar.gz`\
 `apt-get install build-essential` - for nvim-treesitter\
 `apt-get install ripgrep` - for telescope\
-`git clone git@github.com:martonkaufmann/nvim-config.git ~/.config/nvim`\
+`git clone git@github.com:martonkaufmann/nvim-config.git ~/.config/nvim`
+
 Add "export PATH=$PATH:~/.local/bin/nvim-linux64/bin" to the ~/.bashrc
 
 ### Installing fonts:
@@ -105,4 +106,5 @@ https://github.com/jesseduffield/lazygit/blob/master/docs/keybindings/Keybinding
 `mkdir -p ~/.local/bin/lazygit`\
 `tar -xzf lazygit_0.40.2_Linux_x86_64.tar.gz -C ~/.local/bin/lazygit`\
 `rm lazygit_0.40.2_Linux_x86_64.tar.gz`
+
 Add "export PATH=$PATH:~/.local/bin/lazygit" to the ~/.bashrc
