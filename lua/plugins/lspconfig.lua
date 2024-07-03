@@ -4,13 +4,15 @@ return {
 		local lspconfig = require("lspconfig")
 
 		-- npm install -g typescript typescript-language-server
-		-- require("lspconfig").tsserver.setup{}
+		-- lspconfig.tsserver.setup{}
 
 		-- go install golang.org/x/tools/gopls@latest
-		-- require("lspconfig").gopls.setup{}
+		lspconfig.gopls.setup{}
+
+        lspconfig.gleam.setup{}
 
         -- https://phpactor.readthedocs.io/en/master/usage/standalone.html
-		-- require("lspconfig").phpactor.setup{
+		-- lspconfig.phpactor.setup{
         --    on_attach = on_attach,
         --    init_options = {
         --        ["language_server_phpstan.enabled"] = false,
@@ -22,9 +24,9 @@ return {
         -- https://github.com/vimeo/psalm/blob/5.x/docs/running_psalm/installation.md
         -- Recommended to install globally in container using the followign command:
         -- composer global require vimeo/psalm --no-interaction
-        -- require("lspconfig").psalm.setup{}
+        -- lspconfig.psalm.setup{}
 
         -- npm install -g intelephense
-        -- require("lspconfig").intelephense.setup{}
+        -- lspconfig.intelephense.setup{}
 	end
 }

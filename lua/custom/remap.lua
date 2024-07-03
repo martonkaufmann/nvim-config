@@ -2,7 +2,8 @@ local lazy = require("lazy")
 local telescope = require("telescope.builtin")
 
 -- Built in
-vim.keymap.set("n", "<C-e>", vim.cmd.Ex, { desc = "Open file explorer" })
+-- TODO: Already mapped
+vim.keymap.set("n", "<leader>e", vim.cmd.Ex, { desc = "Open file explorer" })
 -- TODO: Check and debug
 vim.keymap.set("n", "<leader>t", function()
     vim.cmd.tabnew(vim.fn.input("", "", "file"))
@@ -36,7 +37,7 @@ vim.keymap.set("n", "<leader>ph", telescope.help_tags, { desc = "List telescope 
 vim.keymap.set("n", "<leader>ps", telescope.git_files, { desc = "List git files" })
 
 -- Undotree
-vim.keymap.set("n", "<leader><F12>", vim.cmd.UndotreeToggle, { desc = "Open undotree" })
+vim.keymap.set("n", "<leader>ut", vim.cmd.UndotreeToggle, { desc = "Open undotree" })
 
 -- LSP
 -- Global mappings.
