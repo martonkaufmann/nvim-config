@@ -67,6 +67,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "gF", function()
       vim.lsp.buf.format { async = true }
     end, { buffer = ev.buf, desc = "Format" })
+    vim.keymap.set("n", "<leader>go", "<cmd>Outline<CR>", { desc = "Toggle Outline" })
     vim.keymap.set("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, { buffer = ev.buf, desc = "Add to workspace" })
     vim.keymap.set("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, { buffer = ev.buf, desc = "Remove from workspace" })
     vim.keymap.set("n", "<leader>wl", function()
