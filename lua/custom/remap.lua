@@ -1,8 +1,6 @@
 local lazy = require("lazy")
 local telescope = require("telescope.builtin")
 
--- Built in
--- TODO: Already mapped
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex, { desc = "Open file explorer" })
 -- TODO: Check and debug
 vim.keymap.set("n", "<leader>t", function()
