@@ -2,10 +2,17 @@ local lazy = require("lazy")
 local telescope = require("telescope.builtin")
 
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex, { desc = "Open file explorer" })
--- TODO: Check and debug
-vim.keymap.set("n", "<leader>t", function()
-    vim.cmd.tabnew(vim.fn.input("", "", "file"))
-end, { desc = "Open file in new tab" })
+
+-- Tabs
+vim.keymap.set("n", "<leader>tn", vim.cmd.tabnew, { desc = "Open a new tab" })
+vim.keymap.set("n", "<leader>tc", vim.cmd.tabclose, { desc = "Close tab" })
+vim.keymap.set("n", "<leader>to", vim.cmd.tabonly, { desc = "Close all other tabs" })
+vim.keymap.set("n", "<leader>th", function()
+    vim.cmd.tabmove("-1")
+end, { desc = "Move tab to the left" })
+vim.keymap.set("n", "<leader>tl", function()
+    vim.cmd.tabmove("+1")
+end, { desc = "Move tab to the right" })
  
 -- Lazy
 vim.keymap.set("n", "<leader>lh", lazy.home, { desc = "Open lazy home" })
