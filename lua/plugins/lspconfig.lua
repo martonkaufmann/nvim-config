@@ -11,6 +11,10 @@ return {
 
         lspconfig.gleam.setup{}
 
+        lspconfig.templ.setup{}
+        -- This is necessary for other LSPs to "pick up" on .templ files.
+        vim.filetype.add({ extension = { templ = "templ" } })
+
         -- https://phpactor.readthedocs.io/en/master/usage/standalone.html
 		-- lspconfig.phpactor.setup{
         --    on_attach = on_attach,
