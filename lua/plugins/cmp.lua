@@ -60,18 +60,5 @@ return {
 		})
 
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
-		-- require("lspconfig")["tsserver"].setup {
-		-- 	capabilities = capabilities
-		-- }
-		-- require("lspconfig")["phpactor"].setup {
-		--     capabilities = capabilities
-		-- }
-		-- require("lspconfig")["psalm"].setup {
-		--     capabilities = capabilities
-		-- }
-        -- Prefer this one
-		-- require("lspconfig")["intelephense"].setup {
-		--     capabilities = capabilities
-		-- }
 	end
 }

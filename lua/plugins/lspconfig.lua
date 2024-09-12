@@ -15,15 +15,6 @@ return {
         -- This is necessary for other LSPs to "pick up" on .templ files.
         vim.filetype.add({ extension = { templ = "templ" } })
 
-        -- https://phpactor.readthedocs.io/en/master/usage/standalone.html
-		-- lspconfig.phpactor.setup{
-        --    on_attach = on_attach,
-        --    init_options = {
-        --        ["language_server_phpstan.enabled"] = false,
-        --        ["language_server_psalm.enabled"] = false,
-        --    }            
-        -- }
-
         -- Prefer this one
         -- https://github.com/vimeo/psalm/blob/5.x/docs/running_psalm/installation.md
         -- Recommended to install globally in container using the followign command:
@@ -31,6 +22,6 @@ return {
         -- lspconfig.psalm.setup{}
 
         -- npm install -g intelephense
-        -- lspconfig.intelephense.setup{}
+        lspconfig.intelephense.setup{}
 	end
 }

@@ -5,7 +5,26 @@ return {
       local configs = require("nvim-treesitter.configs")
 
       configs.setup({
-          ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "javascript", "typescript", "html", "php", "go", "json", "csv", "tsv", "css", "dockerfile", "gleam", "templ" },
+          ensure_installed = { 
+                "c", 
+                "lua", 
+                "vim", 
+                "vimdoc", 
+                "query", 
+                "javascript", 
+                "typescript", 
+                "html", 
+                "php", 
+                "go", 
+                "json", 
+                "csv", 
+                "tsv", 
+                "css", 
+                "dockerfile", 
+                "gleam", 
+                "templ",
+                "tsx"
+          },
           highlight = { enable = true },
           indent = { enable = true },  
         })
