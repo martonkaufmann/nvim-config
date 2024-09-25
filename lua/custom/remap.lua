@@ -40,6 +40,7 @@ end, { desc = "Live grep in folder" })
 vim.keymap.set("n", "<leader>pb", telescope.buffers, { desc = "List buffers" })
 vim.keymap.set("n", "<leader>ph", telescope.help_tags, { desc = "List telescope help tags" })
 vim.keymap.set("n", "<leader>ps", telescope.git_files, { desc = "List git files" })
+vim.keymap.set("n", "<leader>pr", telescope.resume, { desc = "Resume" })
 
 -- Undotree
 vim.keymap.set("n", "<leader>ut", vim.cmd.UndotreeToggle, { desc = "Open undotree" })
