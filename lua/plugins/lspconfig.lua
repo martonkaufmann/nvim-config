@@ -4,7 +4,11 @@ return {
 		local lspconfig = require("lspconfig")
 
 		-- npm install -g typescript typescript-language-server
-		lspconfig.tsserver.setup{}
+		lspconfig.ts_ls.setup{
+            single_file_support = false
+        }
+
+        lspconfig.denols.setup{}
 
 		-- go install golang.org/x/tools/gopls@latest
 		lspconfig.gopls.setup{}
@@ -12,8 +16,6 @@ return {
         lspconfig.gleam.setup{}
 
         lspconfig.templ.setup{}
-        -- This is necessary for other LSPs to "pick up" on .templ files.
-        vim.filetype.add({ extension = { templ = "templ" } })
 
         -- Prefer this one
         -- https://github.com/vimeo/psalm/blob/5.x/docs/running_psalm/installation.md
@@ -22,6 +24,7 @@ return {
         -- lspconfig.psalm.setup{}
 
         -- npm install -g intelephense
+        -- create license file intelephense/licence.txt
         lspconfig.intelephense.setup{}
 	end
 }
