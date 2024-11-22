@@ -23,14 +23,6 @@ require("custom.remap")
 
 vim.cmd "colorscheme tokyonight"
 
--- This is necessary for other LSPs to "pick up" on .templ files.
-vim.filetype.add({ extension = { templ = "templ" } })
-
--- This is necessary to appropriately highlight codefences returned from denols
-vim.g.markdown_fenced_languages = {
-  "ts=typescript"
-}
-
 -- This is necessary to use treesitter for code folding
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"

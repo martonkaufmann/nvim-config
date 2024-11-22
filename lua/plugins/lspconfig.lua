@@ -13,8 +13,6 @@ return {
 
         lspconfig.gleam.setup{}
 
-        lspconfig.templ.setup{}
-
         lspconfig.svelte.setup{}
 
         -- Prefer this one
