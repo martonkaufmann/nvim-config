@@ -15,12 +15,6 @@ return {
 
         lspconfig.svelte.setup{}
 
-        -- Prefer this one
-        -- https://github.com/vimeo/psalm/blob/5.x/docs/running_psalm/installation.md
-        -- Recommended to install globally in container using the followign command:
-        -- composer global require vimeo/psalm --no-interaction
-        -- lspconfig.psalm.setup{}
-
         -- npm install -g intelephense
         -- create license file intelephense/licence.txt
         lspconfig.intelephense.setup{}
