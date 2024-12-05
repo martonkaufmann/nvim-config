@@ -13,8 +13,6 @@ return {
 
         lspconfig.gleam.setup{}
 
-        lspconfig.svelte.setup{}
-
         -- npm install -g intelephense
         -- create license file intelephense/licence.txt
         lspconfig.intelephense.setup{}

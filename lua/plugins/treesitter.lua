@@ -22,8 +22,7 @@ return {
                 "css", 
                 "dockerfile", 
                 "gleam", 
-                "tsx",
-                "svelte"
+                "tsx"
           },
           highlight = { enable = true },
           indent = { enable = true },  
