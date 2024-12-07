@@ -18,29 +18,15 @@ end, { desc = "Move tab to the right" })
 vim.keymap.set("n", "<leader>lh", lazy.home, { desc = "Open lazy home" })
 
 -- Telescope
-vim.keymap.set("n", "<leader>pf", function() 
-    telescope.find_files()
-end, { desc = "Find files" })
--- TODO: Check and debug
-vim.keymap.set("n", "<leader>pF", function()
-    -- https://neovim.io/doc/user/builtin.html#input()
-    -- https://github.com/neovim/neovim/blob/master/runtime/doc/usr_41.txt#L974
-    telescope.find_files({ search_dirs = { vim.fn.input("", "", "dir") } }) 
-end, { desc = "Find files in folder" })
-vim.keymap.set("n", "<leader>pg", function()
-    telescope.live_grep()
-end, { desc = "Live grep" })
--- TODO: Check and debug
-vim.keymap.set("n", "<leader>pG", function()
-    -- https://neovim.io/doc/user/builtin.html#input()
-    -- https://github.com/neovim/neovim/blob/master/runtime/doc/usr_41.txt#L974
-    telescope.live_grep({ search_dirs = { vim.fn.input("", "", "dir") } }) 
-end, { desc = "Live grep in folder" })
-
+vim.keymap.set("n", "<leader>pf", telescope.find_files, { desc = "Find files" })
+vim.keymap.set("n", "<leader>pg", telescope.live_grep, { desc = "Live grep" })
 vim.keymap.set("n", "<leader>pb", telescope.buffers, { desc = "List buffers" })
 vim.keymap.set("n", "<leader>ph", telescope.help_tags, { desc = "List telescope help tags" })
 vim.keymap.set("n", "<leader>ps", telescope.git_files, { desc = "List git files" })
 vim.keymap.set("n", "<leader>pr", telescope.resume, { desc = "Resume" })
+vim.keymap.set("n", "<leader>pc", telescope.grep_string, { desc = "Grep string under custor" })
+vim.keymap.set("n", "<leader>pm", telescope.marks, { desc = "List marks" })
+vim.keymap.set("n", "<leader>pv", telescope.registers, { desc = "List registers" })
 
 -- Undotree
 vim.keymap.set("n", "<leader>ut", vim.cmd.UndotreeToggle, { desc = "Open undotree" })
