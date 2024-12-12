@@ -8,6 +8,9 @@ return {
             single_file_support = false
         }
 
+        -- npm install -g @biomejs/biome
+		lspconfig.biome.setup{}
+
 		-- go install golang.org/x/tools/gopls@latest
 		lspconfig.gopls.setup{}
 
