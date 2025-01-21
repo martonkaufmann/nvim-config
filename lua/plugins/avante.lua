@@ -5,6 +5,15 @@ return {
   version = false, -- set this if you want to always pull the latest change
   opts = {
     -- add any opts here
+    provider = "lmstudio",
+    vendors = {
+      lmstudio = {
+        __inherited_from = "openai",
+        ['local'] = true,
+        endpoint = "http://192.168.50.145:1234/v1",
+        model = "llama-3.2-3b-instruct",
+      },
+    },
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
   build = "make",
