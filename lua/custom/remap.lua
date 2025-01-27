@@ -39,6 +39,10 @@ vim.keymap.set("n", "<leader>d[", vim.diagnostic.goto_prev, { desc = "Go to next
 vim.keymap.set("n", "<leader>d]", vim.diagnostic.goto_next, { desc = "Go to previous diagnostic issue" })
 vim.keymap.set("n", "<leader>da", vim.diagnostic.setloclist, { desc = "Show all diagnostic issues" })
 
+-- Git, fugitive.vim
+vim.keymap.set("n", "<leader>Gd", "<cmd>Gdiff<CR>", { desc = "Git diff" })
+vim.keymap.set("n", "<leader>Gb", "<cmd>G blame<CR>", { desc = "Git blame" })
+
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
 vim.api.nvim_create_autocmd("LspAttach", {
