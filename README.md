@@ -49,7 +49,8 @@
 `<backtick> + [mark name]` - jumps to given mark\
 `double <backtick>` - jumps between marks last two marks\
 `m + [upper- or lowercase letter]` add a new mark\
-`ctrl + w x` swap windows
+`ctrl + w x` swap windows\
+`J` inline previous line
 
 * https://neovim.io/doc/user/motion.html#mark-motions
 * https://github.com/nvim-telescope/telescope.nvim#default-mappings
@@ -85,7 +86,7 @@
 `apt-get install ripgrep` - for telescope\
 `git clone git@github.com:martonkaufmann/nvim-config.git ~/.config/nvim`
 
-Add "export PATH=$PATH:~/.local/bin/nvim-linux64/bin" to the ~/.bashrc
+Add `export PATH=$PATH:~/.local/bin/nvim-linux64/bin` to the ~/.bashrc
 
 ### Installing fonts:
 `apt-get install fontconfig`\
