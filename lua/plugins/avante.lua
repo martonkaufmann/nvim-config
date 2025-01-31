@@ -1,7 +1,6 @@
 return {
   "yetone/avante.nvim",
   event = "VeryLazy",
-  lazy = false,
   version = false, -- set this if you want to always pull the latest change
   opts = {
     -- add any opts here
@@ -9,8 +8,8 @@ return {
     vendors = {
       lmstudio = {
         __inherited_from = "openai",
-        ['local'] = true,
-        endpoint = "http://192.168.50.145:1234/v1",
+        api_key_name = "",
+        endpoint = "http://172.16.0.2:1234/v1",
         model = "llama-3.2-3b-instruct",
       },
     },
