@@ -9,8 +9,8 @@ return {
       lmstudio = {
         __inherited_from = "openai",
         api_key_name = "",
-        endpoint = "http://172.16.0.2:1234/v1",
-        model = "llama-3.2-3b-instruct",
+        endpoint = "http://127.0.0.1:1234/v1",
+        model = "qwen2.5-coder-7b-instruct",
       },
     },
   },
