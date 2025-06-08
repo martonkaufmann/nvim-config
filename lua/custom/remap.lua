@@ -40,8 +40,11 @@ vim.keymap.set("n", "<leader>d]", vim.diagnostic.goto_next, { desc = "Go to prev
 vim.keymap.set("n", "<leader>da", vim.diagnostic.setloclist, { desc = "Show all diagnostic issues" })
 
 -- Git, fugitive.vim
-vim.keymap.set("n", "<leader>Gd", "<cmd>Gdiff<CR>", { desc = "Git diff" })
+vim.keymap.set("n", "<leader>Gd", "<cmd>G diff<CR>", { desc = "Git diff" })
 vim.keymap.set("n", "<leader>Gb", "<cmd>G blame<CR>", { desc = "Git blame" })
+vim.keymap.set("n", "<leader>Gc", telescope.git_commits, { desc = "Git commits" })
+vim.keymap.set("n", "<leader>Gr", telescope.git_branches, { desc = "Git branches" })
+vim.keymap.set("n", "<leader>Gs", telescope.git_status, { desc = "Git status" })
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
