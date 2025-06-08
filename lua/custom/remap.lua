@@ -13,7 +13,8 @@ end, { desc = "Move tab to the left" })
 vim.keymap.set("n", "<leader>tl", function()
     vim.cmd.tabmove("+1")
 end, { desc = "Move tab to the right" })
- 
+vim.keymap.set("n", "<leader>ts", '<cmd>tab split<CR>', { desc = "Open tab in new buffer" })
+
 -- Lazy
 vim.keymap.set("n", "<leader>lh", lazy.home, { desc = "Open lazy home" })
 
