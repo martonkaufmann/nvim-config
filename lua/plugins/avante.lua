@@ -4,17 +4,19 @@ return {
   version = false, -- set this if you want to always pull the latest change
   opts = {
     -- add any opts here
-    -- provider = "lmstudio",
-    provider = "claude",
-    -- vendors = {
-    --   lmstudio = {
-    --     __inherited_from = "openai",
-    --     api_key_name = "",
-    --     endpoint = "http://127.0.0.1:1234/v1",
-    --     model = "qwen2.5-coder-7b-instruct",
-    --   },
-    -- },
-    -- auto_suggestions_provider = "lmstudio",
+    provider = "azure/Codestral-2501",
+    providers = {
+        ["azure/Codestral-2501"] = {
+          __inherited_from = "openai",
+          api_key_name = "AZURE_AI_API_KEY",
+          endpoint = "https://kaufm-m9setrpy-eastus2.services.ai.azure.com/models",
+          model = "Codestral-2501",
+          extra_request_body = {
+            max_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models), max_completion_tokens
+          }
+        }
+    }
+    -- provider = "claude",
     -- behaviour = {
     --     auto_suggestions = false,
     -- },
@@ -57,3 +59,4 @@ return {
     },
   },
 }
+
