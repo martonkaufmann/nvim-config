@@ -10,7 +10,7 @@ return {
 		}
 
         -- npm install -g @biomejs/biome
-		-- lspconfig.biome.setup{}
+		lspconfig.biome.setup{}
 
         -- npm i -g vscode-langservers-extracted
 		lspconfig.eslint.setup{}
