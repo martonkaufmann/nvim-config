@@ -29,6 +29,26 @@ vim.keymap.set("n", "<leader>pc", telescope.grep_string, { desc = "Grep string u
 vim.keymap.set("n", "<leader>pm", telescope.marks, { desc = "List marks" })
 vim.keymap.set("n", "<leader>pv", telescope.registers, { desc = "List registers" })
 
+
+vim.keymap.set("n", "<Leader>cd", function()
+  local cwd = vim.fn.input("Enter directory: ", "", "dir")
+
+  if cwd == "" or cwd == nil then
+    print("No directory selected")
+    return
+  end
+
+  print("Selected directory: " .. cwd)
+
+  vim.keymap.set("n", "<leader>pf", function()
+    telescope.find_files({ cwd = cwd })
+  end, { desc = "Find files" })
+  vim.keymap.set("n", "<leader>pg", function()
+    telescope.live_grep({ cwd = cwd })
+  end, { desc = "Live grep" })
+
+end, { desc = "Change telescope find files and live grep directory" })
+
 -- Undotree
 vim.keymap.set("n", "<leader>ut", vim.cmd.UndotreeToggle, { desc = "Open undotree" })
 
