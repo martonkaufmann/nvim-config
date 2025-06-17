@@ -4,7 +4,7 @@
 `%` create new file\
 `d` create new directory\
 `D` delete directory\
-`ctrl + l` redraw screen, removes search highlight\
+`<ctrl> + l` redraw screen, removes search highlight\
 `yy|Y` yank/copy\
 `dd` delete\
 `p` paste\
@@ -14,9 +14,9 @@
 `#` search for string when over it, backward\
 `N` search forward\
 `n` search backward\
-`ctrl + w, v|s` split window vertically or horizontally\
-`ctrl + w, h|j|k|l` jump between split\
-`ctrl + w, +|-|<|>` resize split window\
+`<ctrl> + w, v|s` split window vertically or horizontally\
+`<ctrl> + w, h|j|k|l` jump between split\
+`<ctrl> + w, +|-|<|>` resize split window\
 `u` undo\
 `ctlr + r` redo\
 `R` replace at cursor\
@@ -37,8 +37,8 @@
 `zfaB` fold block\
 `gU` make uppercase\
 `gu` make lowercase\
-`ctrl + w + w` switch between windows\
-`ctrl + o` go back to prev screen\
+`<ctrl> + w + w` switch between windows\
+`<ctrl> + o` go back to prev screen\
 `tab` go to next screen\
 `D` delete until cursor\
 `:reg` list registers and select text to paste\
@@ -48,9 +48,9 @@
 `<backtick> + [mark name]` - jumps to given mark\
 `double <backtick>` - jumps between marks last two mark\
 `m + [upper- or lowercase letter]` add a new mark\
-`ctrl + w x` swap windows\
+`<ctrl> + w x` swap windows\
 `K` show details\
-`ctrl + w d` show diagnostic issue\
+`<ctrl> + w d` show diagnostic issue\
 `ctrl+v` select lines `$` to go to end of line `A` to insert character to multiple line endings\
 `P` insert before cursor\
 select text then `J` remove new line characters\
@@ -58,9 +58,10 @@ select text then `gc` to toggle comments\
 `dw` delete spaces before word until cursor\
 `za` toggle fold\
 `x` in normal mode - backspace\
-`ctrl + w` in insert mode - delete word backward\
+`<ctrl> + w` in insert mode - delete word backward\
 `d+i+w` - delete word that cursor is in\
 `d+i+}` - delete contents of curlies\
+`<ctrl> + v` to select the lines `$` to jump to line ending `A` to enter append mode - edit multiple line endings\
 
 * https://neovim.io/doc/user/motion.html#mark-motions
 * https://github.com/nvim-telescope/telescope.nvim#default-mappings
