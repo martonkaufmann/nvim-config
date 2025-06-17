@@ -5,41 +5,46 @@ return {
   opts = {
     -- add any opts here
     -- provider = "lmstudio/qwen2.5-coder-7b-instruct",
-    provider = "azure/gpt-4.1",
+    -- provider = "azure/DeepSeek-R1-0528",
+    provider = "claude",
     providers = {
         ["azure/gpt-4.1"] = {
           __inherited_from = "openai",
           api_key_name = "AZURE_AI_API_KEY",
           endpoint = "https://kaufm-m9setrpy-eastus2.services.ai.azure.com/models",
-          -- model = "Codestral-2501",
           model = "gpt-4.1",
-          disable_tools = true,
           extra_request_body = {
             max_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models), max_completion_tokens
           }
+        },
+        ["azure/DeepSeek-R1-0528"] = {
+          __inherited_from = "openai",
+          api_key_name = "AZURE_AI_API_KEY",
+          endpoint = "https://kaufm-m9setrpy-eastus2.services.ai.azure.com/models",
+          model = "DeepSeek-R1-0528",
+          disable_tools = true,
         },
         ["lmstudio/qwen2.5-coder-7b-instruct"] = {
           __inherited_from = "openai",
           api_key_name = "",
           endpoint = "http://localhost:1234/v1",
-          -- model = "Codestral-2501",
           model = "qwen2.5-coder-7b-instruct",
           disable_tools = true,
-          extra_request_body = {
-            max_tokens = 4096, -- Increase this to include reasoning tokens (for reasoning models), max_completion_tokens
-          }
         },
         ["lmstudio/deepseek-r1-0528-qwen3-8b"] = {
           __inherited_from = "openai",
           api_key_name = "",
           endpoint = "http://localhost:1234/v1",
-          -- model = "Codestral-2501",
           model = "deepseek-r1-0528-qwen3-8b",
           disable_tools = true,
-          extra_request_body = {
-            max_tokens = 4096, -- Increase this to include reasoning tokens (for reasoning models), max_completion_tokens
-          }
-        }
+        },
+        ["lmstudio/google/gemma-3-4b"] = {
+          __inherited_from = "openai",
+          api_key_name = "",
+          endpoint = "http://localhost:1234/v1",
+          model = "google/gemma-3-4b",
+          disable_tools = true,
+        },
     }
     -- provider = "claude",
     -- behaviour = {
