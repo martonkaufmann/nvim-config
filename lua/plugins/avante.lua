@@ -6,7 +6,7 @@ return {
     -- add any opts here
     -- provider = "lmstudio/qwen2.5-coder-7b-instruct",
     -- provider = "azure/DeepSeek-R1-0528",
-    provider = "claude",
+    provider = "lmstudio/google/gemma-3-4b",
     providers = {
         ["azure/gpt-4.1"] = {
           __inherited_from = "openai",
@@ -43,12 +43,17 @@ return {
           api_key_name = "",
           endpoint = "http://localhost:1234/v1",
           model = "google/gemma-3-4b",
-          disable_tools = true,
+        },
+        ["lmstudio/google/gemma-3-12b"] = {
+          __inherited_from = "openai",
+          api_key_name = "",
+          endpoint = "http://localhost:1234/v1",
+          model = "google/gemma-3-12b",
         },
     }
     -- provider = "claude",
     -- behaviour = {
-    --     auto_suggestions = false,
+    --     auto_suggestions = false, -- TODO: enable and play with this on local with a smaller model
     -- },
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
