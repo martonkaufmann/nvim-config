@@ -30,8 +30,8 @@ vim.keymap.set("n", "<leader>pm", telescope.marks, { desc = "List marks" })
 vim.keymap.set("n", "<leader>pv", telescope.registers, { desc = "List registers" })
 
 
-vim.keymap.set("n", "<Leader>cd", function()
-  local cwd = vim.fn.input("Enter directory: ", "", "dir")
+vim.keymap.set("n", "<leader>pd", function()
+  local cwd = vim.fn.input("Select directory: ", "", "dir")
 
   if cwd == "" or cwd == nil then
     print("No directory selected")
