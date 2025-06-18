@@ -61,7 +61,17 @@ select text then `gc` to toggle comments\
 `<ctrl> + w` in insert mode - delete word backward\
 `d+i+w` - delete word that cursor is in\
 `d+i+}` - delete contents of curlies\
+`v+i+*` - does the same as the ones above, but instead of deleting it select the text\
 `<ctrl> + v` to select the lines `$` to jump to line ending `A` to enter append mode - edit multiple line endings\
+`"` - bring up the register and after selecting the text `p` can be used to paste it\
+`<backtick>^` - jumps to the last insert location\
+select text in normal mode using `v` then press `c` to delet the selected text and into insert mode\
+when searching `gnc` can be used to change currently highlighted selection/search result\
+when searching `cgn` can be used as above, but `.` will apply the same changes to the next search result\
+`gcc` - toggle comment on single line\
+after selecting text in normal mode `v` comments can be toggled using `gc`\
+`:e!` - will remove all unsaved changes\
+
 
 * https://neovim.io/doc/user/motion.html#mark-motions
 * https://github.com/nvim-telescope/telescope.nvim#default-mappings
