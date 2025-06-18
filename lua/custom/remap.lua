@@ -29,7 +29,6 @@ vim.keymap.set("n", "<leader>pc", telescope.grep_string, { desc = "Grep string u
 vim.keymap.set("n", "<leader>pm", telescope.marks, { desc = "List marks" })
 vim.keymap.set("n", "<leader>pv", telescope.registers, { desc = "List registers" })
 
-
 vim.keymap.set("n", "<leader>pd", function()
   local cwd = vim.fn.input("Select directory: ", "", "dir")
 
@@ -78,15 +77,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
     -- Buffer local mappings.
     -- See `:help vim.lsp.*` for documentation on any of the below functions
     local opts = { buffer = ev.buf }
-    vim.keymap.set("n", "gD", vim.lsp.buf.type_definition, { buffer = ev.buf, desc = "Go to type definition" })
-    vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = ev.buf, desc = "Go to definition" })
-    vim.keymap.set("n", "gk", vim.lsp.buf.hover, { buffer = ev.buf, desc = "Show definition" })
-    vim.keymap.set("n", "gK", vim.lsp.buf.signature_help, { buffer = ev.buf, desc = "Show signature helper" })
-    vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { buffer = ev.buf, desc = "Go to implementation" })
-    vim.keymap.set("n", "gr", vim.lsp.buf.references, { buffer = ev.buf, desc = "Show references" })
-    vim.keymap.set("n", "gn", vim.lsp.buf.rename, { buffer = ev.buf, desc = "Rename" })
-    vim.keymap.set("n", "gs", vim.lsp.buf.document_symbol, { buffer = ev.buf, desc = "Document symbols" })
-    vim.keymap.set("n", "gF", function()
+    vim.keymap.set("n", "<leader>gD", vim.lsp.buf.type_definition, { buffer = ev.buf, desc = "Go to type definition" })
+    vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { buffer = ev.buf, desc = "Go to definition" })
+    vim.keymap.set("n", "<leader>gk", vim.lsp.buf.hover, { buffer = ev.buf, desc = "Show definition" })
+    vim.keymap.set("n", "<leader>gK", vim.lsp.buf.signature_help, { buffer = ev.buf, desc = "Show signature helper" })
+    vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, { buffer = ev.buf, desc = "Go to implementation" })
+    vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, { buffer = ev.buf, desc = "Show references" })
+    vim.keymap.set("n", "<leader>gn", vim.lsp.buf.rename, { buffer = ev.buf, desc = "Rename" })
+    vim.keymap.set("n", "<leader>gs", vim.lsp.buf.document_symbol, { buffer = ev.buf, desc = "Document symbols" })
+    vim.keymap.set("n", "<leader>gF", function()
       vim.lsp.buf.format { async = true }
     end, { buffer = ev.buf, desc = "Format" })
     vim.keymap.set("n", "<leader>go", "<cmd>Outline<CR>", { desc = "Toggle Outline" })
