@@ -72,6 +72,10 @@ when searching `cgn` can be used as above, but `.` will apply the same changes t
 after selecting text in normal mode `v` comments can be toggled using `gc`\
 `:e!` - will remove all unsaved changes\
 
+set file format from windows to unix\
+`: e ++ff=dos `\
+`: set ff=unix `\
+`: w`\
 
 * https://neovim.io/doc/user/motion.html#mark-motions
 * https://github.com/nvim-telescope/telescope.nvim#default-mappings
