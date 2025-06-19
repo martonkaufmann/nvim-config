@@ -24,6 +24,8 @@ return {
                 "gleam", 
                 "tsx",
                 "yaml",
+                "regex",
+                "bash"
           },
           highlight = { enable = true },
           indent = { enable = true },  

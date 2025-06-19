@@ -81,15 +81,25 @@ set file format from windows to unix\
 * https://github.com/nvim-telescope/telescope.nvim#default-mappings
 * Check custom/remap.lua and plugins/cmp.lua
 
+### Required binaries:
+* https://github.com/BurntSushi/ripgrep
+* https://github.com/tree-sitter/tree-sitter
+* https://github.com/sharkdp/fd
+
 ### Plugins:
-* https://github.com/folke/lazy.nvim
-* https://github.com/folke/which-key.nvim
-* https://github.com/mbbill/undotree
-* https://github.com/nvim-treesitter/nvim-treesitter
-* https://github.com/nvim-lualine/lualine.nvim
-* https://github.com/nvim-tree/nvim-web-devicons
 * https://github.com/hrsh7th/nvim-cmp
+* https://github.com/olimorris/codecompanion.nvim
+* https://github.com/tpope/vim-fugitive
+* https://github.com/nvim-lualine/lualine.nvim
+* https://github.com/neovim/nvim-lspconfig
+* https://github.com/folke/noice.nvim
+* https://github.com/hedyhli/outline.nvim
 * https://github.com/nvim-telescope/telescope.nvim
+* https://github.com/folke/tokyonight.nvim
+* https://github.com/nvim-treesitter/nvim-treesitter
+* https://github.com/mbbill/undotree
+* https://github.com/folke/which-key.nvim
+* https://github.com/folke/lazy.nvim
 
 ### LSP:
 * https://github.com/neovim/nvim-lspconfig
@@ -97,21 +107,6 @@ set file format from windows to unix\
 * https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 * https://langserver.org/
 * https://microsoft.github.io/language-server-protocol/implementors/servers/
-
-### Installing languages:
-* https://go.dev/doc/install
-* https://github.com/nodesource/distributions#installation-instructions
-
-### Installing neovim:
-`curl -O -L https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz`\
-`mkdir -p ~/.local/bin`\
-`tar -xzf nvim-linux64.tar.gz -C ~/.local/bin`\
-`rm nvim-linux64.tar.gz`\
-`apt-get install build-essential` - for nvim-treesitter\
-`apt-get install ripgrep` - for telescope\
-`git clone git@github.com:martonkaufmann/nvim-config.git ~/.config/nvim`
-
-Add `export PATH=$PATH:~/.local/bin/nvim-linux64/bin` to the ~/.bashrc
 
 ### Installing fonts:
 `apt-get install fontconfig`\

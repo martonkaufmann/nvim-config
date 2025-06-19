@@ -19,7 +19,8 @@ return {
     "nvim-treesitter/nvim-treesitter",
     {
       "MeanderingProgrammer/render-markdown.nvim",
-      ft = { "markdown", "codecompanion" }
+      ft = { "markdown", "codecompanion" },
+      latext = { enabled = false },
     },
     {
       "HakonHarnes/img-clip.nvim",
