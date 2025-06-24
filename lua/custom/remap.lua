@@ -25,7 +25,7 @@ vim.keymap.set("n", "<leader>pb", telescope.buffers, { desc = "List buffers" })
 vim.keymap.set("n", "<leader>ph", telescope.help_tags, { desc = "List telescope help tags" })
 vim.keymap.set("n", "<leader>ps", telescope.git_files, { desc = "List git files" })
 vim.keymap.set("n", "<leader>pr", telescope.resume, { desc = "Resume" })
-vim.keymap.set("n", "<leader>pc", telescope.grep_string, { desc = "Grep string under custor" })
+vim.keymap.set("n", "<leader>pc", telescope.grep_string, { desc = "Grep string under cursor" })
 vim.keymap.set("n", "<leader>pm", telescope.marks, { desc = "List marks" })
 vim.keymap.set("n", "<leader>pv", telescope.registers, { desc = "List registers" })
 
@@ -45,8 +45,11 @@ vim.keymap.set("n", "<leader>pd", function()
   vim.keymap.set("n", "<leader>pg", function()
     telescope.live_grep({ cwd = cwd })
   end, { desc = "Live grep" })
+  vim.keymap.set("n", "<leader>pc", function()
+    telescope.grep_string({ cwd = cwd })
+  end, { desc = "Grep string under cursor" })
 
-end, { desc = "Change telescope find files and live grep directory" })
+end, { desc = "Change telescope search directory" })
 
 -- Codecompanion
 vim.keymap.set({ "n", "v" }, "<leader>ac", "<cmd>CodeCompanionActions<cr>", { desc = "Open the Action Palette" })
