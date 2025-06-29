@@ -88,7 +88,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
     -- See `:help vim.lsp.*` for documentation on any of the below functions
     local opts = { buffer = ev.buf }
     vim.keymap.set("n", "<leader>gD", vim.lsp.buf.type_definition, { buffer = ev.buf, desc = "Go to type definition" })
-    vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { buffer = ev.buf, desc = "Go to definition" })
+    vim.keymap.set("n", "<leader>gd", function()
+      local original_buffer = vim.api.nvim_get_current_buf()
+
+      vim.cmd("tabnew")
+      vim.api.nvim_set_current_buf(original_buffer)
+      vim.lsp.buf.definition()
+    end, { buffer = ev.buf, desc = "Go to definition in a new tab" })
+    vim.keymap.set("n", "<leader>gcd", vim.lsp.buf.definition, { buffer = ev.buf, desc = "Go to definition" })
     vim.keymap.set("n", "<leader>gk", vim.lsp.buf.hover, { buffer = ev.buf, desc = "Show definition" })
     vim.keymap.set("n", "<leader>gK", vim.lsp.buf.signature_help, { buffer = ev.buf, desc = "Show signature helper" })
     vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, { buffer = ev.buf, desc = "Go to implementation" })
