@@ -71,7 +71,8 @@ when searching `cgn` can be used as above, but `.` will apply the same changes t
 `gcc` - toggle comment on single line\
 after selecting text in normal mode `v` comments can be toggled using `gc`\
 `:e!` - will remove all unsaved changes\
-`d0` - remove text starting from start of line until the cursor
+`d0` - remove text starting from start of line until the cursor\
+`ctrl+r` - paste text into search field
 
 set file format from windows to unix\
 `: e ++ff=dos `\
