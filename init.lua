@@ -24,6 +24,5 @@ require("custom.remap")
 vim.cmd "colorscheme tokyonight"
 
 -- This is necessary to use treesitter for code folding
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-vim.cmd([[ set nofoldenable ]])
+-- vim.wo.foldmethod = 'expr'
+-- vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'

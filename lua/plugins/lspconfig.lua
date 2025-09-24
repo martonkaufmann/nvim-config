@@ -19,7 +19,7 @@ return {
 
         -- npm install -g intelephense
         -- create license file intelephense/licence.txt
-        -- vim.lsp.enable("intelephense")
+        vim.lsp.enable("intelephense")
         -- vim.lsp.enable("phpactor")
 	end
 }
