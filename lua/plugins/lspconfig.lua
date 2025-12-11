@@ -15,7 +15,7 @@ return {
 		-- go install golang.org/x/tools/gopls@latest
         vim.lsp.enable("gopls")
 
-        -- lspconfig.gleam.setup{}
+        vim.lsp.enable("gleam")
 
         -- npm install -g intelephense
         -- create license file intelephense/licence.txt
