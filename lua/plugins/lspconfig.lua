@@ -12,6 +12,9 @@ return {
         vim.lsp.enable("eslint")
         vim.lsp.enable("jsonls")
 
+        -- npm install -g svelte-language-server
+        vim.lsp.enable('svelte')
+
 		-- go install golang.org/x/tools/gopls@latest
         vim.lsp.enable("gopls")
 

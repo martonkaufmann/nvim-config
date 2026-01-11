@@ -19,6 +19,7 @@ vim.keymap.set("n", "<leader>ts", '<cmd>tab split<CR>', { desc = "Open tab in ne
 vim.keymap.set("n", "<leader>lh", lazy.home, { desc = "Open lazy home" })
 
 -- Telescope
+-- TODO: Search classes, methods, functions, variables, etc.
 vim.keymap.set("n", "<leader>pf", telescope.find_files, { desc = "Find files" })
 vim.keymap.set("n", "<leader>pg", telescope.live_grep, { desc = "Live grep" })
 vim.keymap.set("n", "<leader>pb", telescope.buffers, { desc = "List buffers" })

@@ -13,6 +13,7 @@ return {
                 "query", 
                 "javascript", 
                 "typescript", 
+                "svelte",
                 "html", 
                 "php", 
                 "go", 
