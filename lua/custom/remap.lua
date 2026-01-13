@@ -29,6 +29,8 @@ vim.keymap.set("n", "<leader>pr", telescope.resume, { desc = "Resume" })
 vim.keymap.set("n", "<leader>pc", telescope.grep_string, { desc = "Grep string under cursor" })
 vim.keymap.set("n", "<leader>pm", telescope.marks, { desc = "List marks" })
 vim.keymap.set("n", "<leader>pv", telescope.registers, { desc = "List registers" })
+vim.keymap.set("n", "<leader>pls", telescope.lsp_dynamic_workspace_symbols, { desc = "List LSP symbols" })
+vim.keymap.set("n", "<leader>plr", telescope.lsp_references, { desc = "List references" })
 
 vim.keymap.set("n", "<leader>pd", function()
   local cwd = vim.fn.input("Select directory: ", "", "dir")

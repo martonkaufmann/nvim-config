@@ -4,9 +4,7 @@ return {
     opts = {},
     config = function()
         require("codecompanion").setup({
-            -- TODO: Remove ignore warnings after update
-            ignore_warnings = true,
-            strategies = {
+            interactions = {
                 chat = {
                     adapter = "copilot",
                 },
@@ -14,10 +12,10 @@ return {
                     adapter = "copilot",
                 },
             },
-            memory = {
+            rules = {
                 opts = {
                     chat = {
-                        enabled = true,
+                        autoload = { "default" },
                     },
                 },
                 default = {
