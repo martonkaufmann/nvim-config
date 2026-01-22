@@ -24,6 +24,8 @@ return {
                         "AGENT.md",
                         "AGENTS.md",
                         "instructions",
+                        ".instructions",
+                        ".agents",
                     },
                 },
             },
