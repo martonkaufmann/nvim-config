@@ -1,6 +1,6 @@
 return {
 	"neovim/nvim-lspconfig",
-    lazy = true,
+    event = "VeryLazy",
 	config = function()
 		-- npm install -g typescript typescript-language-server
         vim.lsp.enable("ts_ls")

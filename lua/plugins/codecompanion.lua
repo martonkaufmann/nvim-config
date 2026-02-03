@@ -1,6 +1,6 @@
 return {
     "olimorris/codecompanion.nvim",
-    lazy = true,
+    event = "VeryLazy",
     config = function()
         require("codecompanion").setup({
             interactions = {
