@@ -1,9 +1,9 @@
 return {
     "nvim-treesitter/nvim-treesitter",
+    lazy = true,
     build = ":TSUpdate",
     config = function () 
-      require("nvim-treesitter").setup({
-          ensure_installed = { 
+      require("nvim-treesitter").install({
                 "c", 
                 "lua", 
                 "vim", 
@@ -25,9 +25,6 @@ return {
                 "yaml",
                 "regex",
                 "bash"
-          },
-          highlight = { enable = true },
-          indent = { enable = true },  
         })
     end
 }
