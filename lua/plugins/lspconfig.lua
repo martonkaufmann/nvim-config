@@ -15,6 +15,9 @@ return {
         -- npm install -g svelte-language-server
         vim.lsp.enable('svelte')
 
+        -- npm install -g @tailwindcss/language-server
+        vim.lsp.enable('tailwindcss')
+
 		-- go install golang.org/x/tools/gopls@latest
         vim.lsp.enable("gopls")
 
