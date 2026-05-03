@@ -122,3 +122,6 @@ set file format from windows to unix\
 FiraCode has to be installed on the host system as well when using it with WSL.\
 Set fira code nerd font as terminal font, for WSL show hidden fonts should be checked.
 
+### Dependecies
+[ripgrep](https://github.com/burntsushi/ripgrep)
+[tree-sitter](https://github.com/tree-sitter/tree-sitter)
