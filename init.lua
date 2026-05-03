@@ -26,3 +26,8 @@ vim.cmd "colorscheme tokyonight"
 vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 vim.wo[0][0].foldmethod = 'expr'
 vim.opt.foldenable = false
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'svelte' },
+  callback = function() vim.treesitter.start() end,
+})
