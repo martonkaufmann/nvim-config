@@ -31,3 +31,5 @@ vim.api.nvim_create_autocmd('FileType', {
   pattern = { 'svelte' },
   callback = function() vim.treesitter.start() end,
 })
+
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"

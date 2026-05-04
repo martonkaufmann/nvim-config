@@ -79,6 +79,9 @@ vim.keymap.set("n", "<leader>Gc", telescope.git_commits, { desc = "Git commits" 
 vim.keymap.set("n", "<leader>Gr", telescope.git_branches, { desc = "Git branches" })
 vim.keymap.set("n", "<leader>Gs", telescope.git_status, { desc = "Git status" })
 
+-- AutoSession
+vim.keymap.set("n", "<leader>ass", "<cmd>AutoSession search<CR>", { desc = "AutoSession search" })
+
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
 vim.api.nvim_create_autocmd("LspAttach", {
