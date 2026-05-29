@@ -1,14 +1,28 @@
 return {
     "olimorris/codecompanion.nvim",
+    version = "^19.0.0",
     event = "VeryLazy",
     config = function()
         require("codecompanion").setup({
             interactions = {
                 chat = {
-                    adapter = "copilot",
+                    adapter = "openai",
+                    model = "gpt-5.5",
                 },
                 inline = {
-                    adapter = "copilot",
+                    adapter = "openai",
+                    model = "gpt-5.3-codex",
+                },
+                cli = {
+                    agent = "opencode",
+                    agents = {
+                        opencode = {
+                            cmd = "opencode",
+                            args = {},
+                            description = "OpenCode CLI",
+                            provider = "terminal",
+                        },
+                    },
                 },
             },
             rules = {
@@ -28,10 +42,12 @@ return {
                     },
                 },
             },
+            opts = {
+                log_level = "DEBUG",
+            },
         })
     end,
     dependencies = {
-        "github/copilot.vim",
         "nvim-lua/plenary.nvim",
         "nvim-treesitter/nvim-treesitter",
         {

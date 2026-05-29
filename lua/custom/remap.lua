@@ -60,6 +60,7 @@ vim.keymap.set({ "n", "v" }, "<leader>an", "<cmd>CodeCompanionChat<cr>", { desc 
 vim.keymap.set("v", "<leader>ad", "<cmd>CodeCompanionChat Add<cr>", { desc = "Add selected text to chat buffer" })
 vim.keymap.set({ "n", "v" }, "<leader>aa", "<cmd>CodeCompanionChat Toggle<cr>", { desc = "Toggle chat buffer" })
 vim.keymap.set({ "n", "v" }, "<leader>ap", "<cmd>CodeCompanion<cr>", { desc = "Open the inline assistant" })
+vim.keymap.set({ "n", "v" }, "<leader>ag", "<cmd>CodeCompanionCLI<cr>", { desc = "Open the CLI" })
 
 -- Undotree
 vim.keymap.set("n", "<leader>ut", vim.cmd.UndotreeToggle, { desc = "Open undotree" })
