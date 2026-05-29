@@ -7,11 +7,11 @@ return {
             interactions = {
                 chat = {
                     adapter = "openai",
-                    model = "gpt-5.5",
+                    model = "gpt-5.3-codex",
                 },
                 inline = {
                     adapter = "openai",
-                    model = "gpt-5.3-codex",
+                    model = "gpt-5.4-nano",
                 },
                 cli = {
                     agent = "opencode",
