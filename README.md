@@ -83,26 +83,6 @@ set file format from windows to unix\
 * https://github.com/nvim-telescope/telescope.nvim#default-mappings
 * Check custom/remap.lua and plugins/cmp.lua
 
-### Required binaries:
-* https://github.com/BurntSushi/ripgrep
-* https://github.com/tree-sitter/tree-sitter
-* https://github.com/sharkdp/fd
-
-### Plugins:
-* https://github.com/hrsh7th/nvim-cmp
-* https://github.com/olimorris/codecompanion.nvim
-* https://github.com/tpope/vim-fugitive
-* https://github.com/nvim-lualine/lualine.nvim
-* https://github.com/neovim/nvim-lspconfig
-* https://github.com/folke/noice.nvim
-* https://github.com/hedyhli/outline.nvim
-* https://github.com/nvim-telescope/telescope.nvim
-* https://github.com/folke/tokyonight.nvim
-* https://github.com/nvim-treesitter/nvim-treesitter
-* https://github.com/mbbill/undotree
-* https://github.com/folke/which-key.nvim
-* https://github.com/folke/lazy.nvim
-
 ### LSP:
 * https://github.com/neovim/nvim-lspconfig
 * https://github.com/neovim/nvim-lspconfig#suggested-configuration
