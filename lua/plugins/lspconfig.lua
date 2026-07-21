@@ -19,7 +19,7 @@ return {
         vim.lsp.enable('tailwindcss')
 
 		-- go install golang.org/x/tools/gopls@latest
-        vim.lsp.enable("gopls")
+		--       vim.lsp.enable("gopls")
 
         vim.lsp.enable("gleam")
 
@@ -27,5 +27,6 @@ return {
         -- create license file intelephense/licence.txt
         -- vim.lsp.enable("intelephense")
         -- vim.lsp.enable("phpactor")
+        vim.lsp.enable('phpantom_lsp')
 	end
 }
