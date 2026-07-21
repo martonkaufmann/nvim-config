@@ -25,6 +25,7 @@ return {
 
         -- npm install -g intelephense
         -- create license file intelephense/licence.txt
+        -- brew install phpantom-lsp
         -- vim.lsp.enable("intelephense")
         -- vim.lsp.enable("phpactor")
         vim.lsp.enable('phpantom_lsp')
