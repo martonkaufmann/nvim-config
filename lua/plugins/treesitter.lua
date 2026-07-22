@@ -8,17 +8,12 @@ return {
             "typescript",
             "svelte",
             "html",
-            "go",
+            "php",
             "json",
-            "csv",
-            "tsv",
             "css",
             "dockerfile",
             "gleam",
             "tsx",
-            "yaml",
-            "regex",
-            "bash",
             "blade"
         })
     end

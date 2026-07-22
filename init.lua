@@ -28,7 +28,7 @@ vim.wo[0][0].foldmethod = 'expr'
 vim.opt.foldenable = false
 
 vim.api.nvim_create_autocmd('FileType', {
-  pattern = { 'svelte' },
+  pattern = { 'svelte', 'blade', 'gleam', 'php', 'javascript', 'typescript', 'html', 'css', 'tsx', 'json', 'dockerfile' },
   callback = function() vim.treesitter.start() end,
 })
 
