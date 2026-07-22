@@ -118,5 +118,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "<leader>wl", function()
       print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
     end, { buffer = ev.buf, desc = "List workspaces" })
+
+    vim.keymap.set("n", "<leader>tru", function()
+        local path = vim.fn.input("Path to upload: ", "", "dir")
+
+        require("transfer.transfer").sync_dir(path, true)
+    end, { desc = "Transfer remote upload" })
   end,
 })
