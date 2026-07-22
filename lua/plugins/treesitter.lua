@@ -18,7 +18,8 @@ return {
             "tsx",
             "yaml",
             "regex",
-            "bash"
+            "bash",
+            "blade"
         })
     end
 }
