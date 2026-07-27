@@ -19,7 +19,6 @@ vim.keymap.set("n", "<leader>ts", '<cmd>tab split<CR>', { desc = "Open tab in ne
 vim.keymap.set("n", "<leader>lh", lazy.home, { desc = "Open lazy home" })
 
 -- Telescope
--- TODO: Search classes, methods, functions, variables, etc.
 vim.keymap.set("n", "<leader>pf", telescope.find_files, { desc = "Find files" })
 vim.keymap.set("n", "<leader>pg", telescope.live_grep, { desc = "Live grep" })
 vim.keymap.set("n", "<leader>pb", telescope.buffers, { desc = "List buffers" })
@@ -31,6 +30,30 @@ vim.keymap.set("n", "<leader>pm", telescope.marks, { desc = "List marks" })
 vim.keymap.set("n", "<leader>pv", telescope.registers, { desc = "List registers" })
 vim.keymap.set("n", "<leader>pls", telescope.lsp_dynamic_workspace_symbols, { desc = "List LSP symbols" })
 vim.keymap.set("n", "<leader>plr", telescope.lsp_references, { desc = "List references" })
+
+vim.keymap.set("n", "<leader>plc", function()
+  telescope.lsp_dynamic_workspace_symbols({
+    symbols = { "Class", "Struct" },
+  })
+end, { desc = "List classes (and structs)" })
+
+vim.keymap.set("n", "<leader>plm", function()
+  telescope.lsp_dynamic_workspace_symbols({
+    symbols = { "Method" },
+  })
+end, { desc = "List methods" })
+
+vim.keymap.set("n", "<leader>plf", function()
+  telescope.lsp_dynamic_workspace_symbols({
+    symbols = { "Function" },
+  })
+end, { desc = "List functions" })
+
+vim.keymap.set("n", "<leader>plv", function()
+  telescope.lsp_dynamic_workspace_symbols({
+    symbols = { "Variable", "Constant" },
+  })
+end, { desc = "List variables and constants" })
 
 vim.keymap.set("n", "<leader>pd", function()
   local cwd = vim.fn.input("Select directory: ", "", "dir")
@@ -53,14 +76,6 @@ vim.keymap.set("n", "<leader>pd", function()
   end, { desc = "Grep string under cursor" })
 
 end, { desc = "Change telescope search directory" })
-
--- Codecompanion
-vim.keymap.set({ "n", "v" }, "<leader>ac", "<cmd>CodeCompanionActions<cr>", { desc = "Open the Action Palette" })
-vim.keymap.set({ "n", "v" }, "<leader>an", "<cmd>CodeCompanionChat<cr>", { desc = "Open a new chat buffer" })
-vim.keymap.set("v", "<leader>ad", "<cmd>CodeCompanionChat Add<cr>", { desc = "Add selected text to chat buffer" })
-vim.keymap.set({ "n", "v" }, "<leader>aa", "<cmd>CodeCompanionChat Toggle<cr>", { desc = "Toggle chat buffer" })
-vim.keymap.set({ "n", "v" }, "<leader>ap", "<cmd>CodeCompanion<cr>", { desc = "Open the inline assistant" })
-vim.keymap.set({ "n", "v" }, "<leader>ag", "<cmd>CodeCompanionCLI<cr>", { desc = "Open the CLI" })
 
 -- Undotree
 vim.keymap.set("n", "<leader>ut", vim.cmd.UndotreeToggle, { desc = "Open undotree" })
@@ -120,9 +135,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end, { buffer = ev.buf, desc = "List workspaces" })
 
     vim.keymap.set("n", "<leader>tru", function()
-        local path = vim.fn.input("Path to upload: ", "", "dir")
+        local path = vim.fn.input("Path to upload: ", "")
 
         require("transfer.transfer").sync_dir(path, true)
     end, { desc = "Transfer remote upload" })
+
+    vim.keymap.set("n", "<leader>trd", function()
+        local path = vim.fn.input("Path to download: ", "")
+
+        require("transfer.transfer").sync_dir(path, false)
+    end, { desc = "Transfer remote download" })
   end,
 })
