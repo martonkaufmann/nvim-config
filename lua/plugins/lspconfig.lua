@@ -8,6 +8,12 @@ return {
         -- npm install -g @biomejs/biome
         vim.lsp.enable("biome")
 
+        -- npm i -g oxlint
+        vim.lsp.enable("oxlint")
+
+        -- npm i -g oxfmt
+        vim.lsp.enable("oxfmt")
+
         -- npm i -g vscode-langservers-extracted
         vim.lsp.enable("eslint")
         vim.lsp.enable("jsonls")
